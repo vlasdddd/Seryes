@@ -1,35 +1,44 @@
 # Series1
 s = 0
+
 for i in range(10):
-    a = float(input())
-    s = s + a
+    x = float(input())
+    s += x
+
 print(s)
 
 
 # Series2
 p = 1
+
 for i in range(10):
-    a = float(input())
-    p = p * a
+    x = float(input())
+    p *= x
+
 print(p)
 
 
 # Series3
 s = 0
+
 for i in range(10):
-    a = float(input())
-    s = s + a
+    x = float(input())
+    s += x
+
 print(s / 10)
 
 
 # Series4
 n = int(input())
+
 s = 0
 p = 1
+
 for i in range(n):
-    a = float(input())
-    s = s + a
-    p = p * a
+    x = float(input())
+    s += x
+    p *= x
+
 print(s)
 print(p)
 
@@ -37,66 +46,84 @@ print(p)
 # Series5
 n = int(input())
 s = 0
+
 for i in range(n):
-    a = float(input())
-    b = int(a)
-    print(float(b))
-    s = s + b
+    x = float(input())
+    x = int(x)
+
+    print(float(x))
+    s += x
+
 print(s)
 
 
 # Series6
 n = int(input())
 p = 1
+
 for i in range(n):
-    a = float(input())
-    b = a - int(a)
-    print(b)
-    p = p * b
+    x = float(input())
+    x = x - int(x)
+
+    print(x)
+    p *= x
+
 print(p)
 
 
 # Series7
 n = int(input())
 s = 0
+
 for i in range(n):
-    a = float(input())
-    b = round(a)
-    print(b)
-    s = s + b
+    x = float(input())
+    x = round(x)
+
+    print(x)
+    s += x
+
 print(s)
 
 
 # Series8
 n = int(input())
 k = 0
+
 for i in range(n):
-    a = int(input())
-    if a % 2 == 0:
-        print(a)
-        k = k + 1
+    x = int(input())
+
+    if x % 2 == 0:
+        print(x)
+        k += 1
+
 print(k)
 
 
 # Series9
 n = int(input())
 k = 0
+
 for i in range(n):
-    a = int(input())
-    if a % 2 != 0:
+    x = int(input())
+
+    if x % 2 != 0:
         print(i + 1)
-        k = k + 1
+        k += 1
+
 print(k)
 
 
 # Series10
 n = int(input())
-found = False
+flag = False
+
 for i in range(n):
-    a = int(input())
-    if a > 0:
-        found = True
-if found:
+    x = int(input())
+
+    if x > 0:
+        flag = True
+
+if flag:
     print("TRUE")
 else:
     print("FALSE")
@@ -105,12 +132,16 @@ else:
 # Series11
 k = int(input())
 n = int(input())
-found = False
+
+flag = False
+
 for i in range(n):
-    a = int(input())
-    if a < k:
-        found = True
-if found:
+    x = int(input())
+
+    if x < k:
+        flag = True
+
+if flag:
     print("TRUE")
 else:
     print("FALSE")
@@ -118,31 +149,40 @@ else:
 
 # Series12
 k = 0
-a = int(input())
-while a != 0:
-    k = k + 1
-    a = int(input())
+x = int(input())
+
+while x != 0:
+    k += 1
+    x = int(input())
+
 print(k)
 
 
 # Series13
 s = 0
-a = int(input())
-while a != 0:
-    if a > 0 and a % 2 == 0:
-        s = s + a
-    a = int(input())
+x = int(input())
+
+while x != 0:
+    if x > 0 and x % 2 == 0:
+        s += x
+
+    x = int(input())
+
 print(s)
 
 
 # Series14
 k = int(input())
 count = 0
-a = int(input())
-while a != 0:
-    if a < k:
-        count = count + 1
-    a = int(input())
+
+x = int(input())
+
+while x != 0:
+    if x < k:
+        count += 1
+
+    x = int(input())
+
 print(count)
 
 
@@ -150,12 +190,17 @@ print(count)
 k = int(input())
 number = 0
 answer = 0
-a = int(input())
-while a != 0:
-    number = number + 1
-    if a > k and answer == 0:
+
+x = int(input())
+
+while x != 0:
+    number += 1
+
+    if x > k and answer == 0:
         answer = number
-    a = int(input())
+
+    x = int(input())
+
 print(answer)
 
 
@@ -163,75 +208,103 @@ print(answer)
 k = int(input())
 number = 0
 answer = 0
-a = int(input())
-while a != 0:
-    number = number + 1
-    if a > k:
+
+x = int(input())
+
+while x != 0:
+    number += 1
+
+    if x > k:
         answer = number
-    a = int(input())
+
+    x = int(input())
+
 print(answer)
 
 
 # Series17
 b = float(input())
 n = int(input())
-inserted = False
+
+added = False
+
 for i in range(n):
-    a = float(input())
-    if a >= b and not inserted:
+    x = float(input())
+
+    if x >= b and not added:
         print(b)
-        inserted = True
-    print(a)
-if not inserted:
+        added = True
+
+    print(x)
+
+if not added:
     print(b)
 
 
 # Series18
 n = int(input())
-last = 0
+last = None
+
 for i in range(n):
-    a = int(input())
-    if i == 0 or a != last:
-        print(a)
-    last = a
+    x = int(input())
+
+    if i == 0 or x != last:
+        print(x)
+
+    last = x
 
 
 # Series19
 n = int(input())
+
 a = int(input())
-k = 0
-for i in range(1, n):
+count = 0
+
+for i in range(n - 1):
     b = int(input())
+
     if b < a:
         print(b)
-        k = k + 1
+        count += 1
+
     a = b
-print(k)
+
+print(count)
 
 
 # Series20
 n = int(input())
+
 a = int(input())
-k = 0
-for i in range(1, n):
+count = 0
+
+for i in range(n - 1):
     b = int(input())
+
     if a < b:
         print(a)
-        k = k + 1
+        count += 1
+
     a = b
-print(k)
+
+print(count)
 
 
 # Series21
 n = int(input())
 a = float(input())
-ok = True
-for i in range(1, n):
+
+flag = True
+
+for i in range(n - 1):
     b = float(input())
+
     if b <= a:
-        ok = False
+        flag = False
+
     a = b
-if ok:
+
+if flag:
     print("TRUE")
 else:
     print("FALSE")
@@ -240,48 +313,60 @@ else:
 # Series22
 n = int(input())
 a = float(input())
+
 answer = 0
+
 for i in range(2, n + 1):
     b = float(input())
+
     if answer == 0 and b >= a:
         answer = i
+
     a = b
+
 print(answer)
 
 
 # Series23
 n = int(input())
+
 a = float(input())
 b = float(input())
+
 answer = 0
+
 for i in range(3, n + 1):
     c = float(input())
+
     if answer == 0:
-        if not ((b > a and b > c) or (b < a and b < c)):
+        if (b >= a and b <= c) or (b <= a and b >= c):
             answer = i - 1
+
     a = b
     b = c
+
 print(answer)
 
 
 # Series24
 n = int(input())
 a = []
+
 for i in range(n):
     a.append(int(input()))
 
-last = -1
+first = -1
 second = -1
 
 for i in range(n):
     if a[i] == 0:
-        second = last
-        last = i
+        second = first
+        first = i
 
 s = 0
 
-for i in range(second + 1, last):
-    s = s + a[i]
+for i in range(second + 1, first):
+    s += a[i]
 
 print(s)
 
@@ -300,12 +385,13 @@ for i in range(n):
     if a[i] == 0:
         if first == -1:
             first = i
+
         last = i
 
 s = 0
 
 for i in range(first + 1, last):
-    s = s + a[i]
+    s += a[i]
 
 print(s)
 
@@ -315,24 +401,24 @@ k = int(input())
 n = int(input())
 
 for i in range(n):
-    a = float(input())
-    print(a ** k)
+    x = float(input())
+    print(x ** k)
 
 
 # Series27
 n = int(input())
 
 for i in range(1, n + 1):
-    a = float(input())
-    print(a ** i)
+    x = float(input())
+    print(x ** i)
 
 
 # Series28
 n = int(input())
 
 for i in range(1, n + 1):
-    a = float(input())
-    print(a ** (n - i + 1))
+    x = float(input())
+    print(x ** (n - i + 1))
 
 
 # Series29
@@ -343,8 +429,8 @@ s = 0
 
 for i in range(k):
     for j in range(n):
-        a = int(input())
-        s = s + a
+        x = int(input())
+        s += x
 
 print(s)
 
@@ -357,8 +443,8 @@ for i in range(k):
     s = 0
 
     for j in range(n):
-        a = int(input())
-        s = s + a
+        x = int(input())
+        s += x
 
     print(s)
 
@@ -373,13 +459,13 @@ for i in range(k):
     found = False
 
     for j in range(n):
-        a = int(input())
+        x = int(input())
 
-        if a == 2:
+        if x == 2:
             found = True
 
     if found:
-        count = count + 1
+        count += 1
 
 print(count)
 
@@ -392,9 +478,9 @@ for i in range(k):
     answer = 0
 
     for j in range(n):
-        a = int(input())
+        x = int(input())
 
-        if a == 2 and answer == 0:
+        if x == 2 and answer == 0:
             answer = j + 1
 
     print(answer)
@@ -408,9 +494,9 @@ for i in range(k):
     answer = 0
 
     for j in range(n):
-        a = int(input())
+        x = int(input())
 
-        if a == 2:
+        if x == 2:
             answer = j + 1
 
     print(answer)
@@ -425,11 +511,10 @@ for i in range(k):
     found = False
 
     for j in range(n):
-        a = int(input())
+        x = int(input())
+        s += x
 
-        s = s + a
-
-        if a == 2:
+        if x == 2:
             found = True
 
     if found:
@@ -444,12 +529,12 @@ total = 0
 
 for i in range(k):
     count = 0
-    a = int(input())
+    x = int(input())
 
-    while a != 0:
-        count = count + 1
-        total = total + 1
-        a = int(input())
+    while x != 0:
+        count += 1
+        total += 1
+        x = int(input())
 
     print(count)
 
@@ -462,19 +547,19 @@ answer = 0
 
 for i in range(k):
     a = int(input())
-    increasing = True
+    flag = True
 
     b = int(input())
 
     while b != 0:
         if b <= a:
-            increasing = False
+            flag = False
 
         a = b
         b = int(input())
 
-    if increasing:
-        answer = answer + 1
+    if flag:
+        answer += 1
 
 print(answer)
 
@@ -486,23 +571,23 @@ answer = 0
 for i in range(k):
     a = int(input())
 
-    increasing = True
-    decreasing = True
+    up = True
+    down = True
 
     b = int(input())
 
     while b != 0:
         if b <= a:
-            increasing = False
+            up = False
 
         if b >= a:
-            decreasing = False
+            down = False
 
         a = b
         b = int(input())
 
-    if increasing or decreasing:
-        answer = answer + 1
+    if up or down:
+        answer += 1
 
 print(answer)
 
@@ -513,24 +598,24 @@ k = int(input())
 for i in range(k):
     a = int(input())
 
-    increasing = True
-    decreasing = True
+    up = True
+    down = True
 
     b = int(input())
 
     while b != 0:
         if b <= a:
-            increasing = False
+            up = False
 
         if b >= a:
-            decreasing = False
+            down = False
 
         a = b
         b = int(input())
 
-    if increasing:
+    if up:
         print(1)
-    elif decreasing:
+    elif down:
         print(-1)
     else:
         print(0)
@@ -544,20 +629,19 @@ for i in range(k):
     a = int(input())
     b = int(input())
 
-    zigzag = True
-
+    flag = True
     c = int(input())
 
     while c != 0:
         if not ((b > a and b > c) or (b < a and b < c)):
-            zigzag = False
+            flag = False
 
         a = b
         b = c
         c = int(input())
 
-    if zigzag:
-        answer = answer + 1
+    if flag:
+        answer += 1
 
 print(answer)
 
@@ -575,7 +659,7 @@ for i in range(k):
     c = int(input())
 
     while c != 0:
-        number = number + 1
+        number += 1
 
         if answer == 0:
             if not ((b > a and b > c) or (b < a and b < c)):
